@@ -1,2 +1,9 @@
-<p>vertical works!</p>
-<router-outlet />
+<div class="h-screen flex flex-col">
+    <app-menu-left />
+    <div class="flex flex-col flex-1 pl-64">
+        <app-top-bar />
+        <main class="flex-1 bg-gray-900 p-4 overflow-y-auto">
+            <router-outlet />
+        </main>
+    </div>
+</div> 
