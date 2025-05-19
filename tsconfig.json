@@ -18,10 +18,15 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "baseUrl": "./",
+    "useDefineForClassFields": true,
+    "paths": {
+      "@anonymouse/*": ["src/app/anonymouse/*"],
+      "@core/*": ["src/app/core/*"],
+      "@infrastructure/*": ["src/app/infrastructure/*"],
+      "@model/*": ["src/app/model/*"],
+      "@environment/*": ["src/app/environment/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MenuLeftComponent } from "../../components/menu-left/menu-left.component";
-import { TopBarComponent } from "../../components/top-bar/top-bar.component";
+import { MenuLeftComponent } from "../../core/shared/menu-left/menu-left.component";
+import { TopBarComponent } from "../../core/shared/top-bar/top-bar.component";
 
 @Component({
   selector: 'app-vertical',

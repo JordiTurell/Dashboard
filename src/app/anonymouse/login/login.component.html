@@ -1,0 +1,20 @@
+<!-- Formulario -->
+<form [formGroup]="loginForm">
+<!-- Email -->
+<div class="mb-6">
+    <label for="email" class="block text-sm font-medium text-gray-600">Correo Electrónico</label>
+    <input type="email" id="email" formControlName = "user" placeholder="Ingresa tu correo" 
+        class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none">
+</div>
+
+<!-- Contraseña -->
+<div class="mb-6">
+    <label for="password" class="block text-sm font-medium text-gray-600">Contraseña</label>
+    <input type="password" id="password" formControlName = "pass" placeholder="Ingresa tu contraseña" 
+        class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none">
+</div>
+
+<!-- Botón de login -->
+<app-button textValue="Iniciar Sesión" [isLoading]=loginvm.isLoading (clicked)="login()"></app-button>
+</form>
+   
