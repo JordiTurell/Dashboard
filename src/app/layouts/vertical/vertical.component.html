@@ -1,9 +1,13 @@
-<div class="h-screen flex flex-col">
-    <app-menu-left />
-    <div class="flex flex-col flex-1 pl-64">
-        <app-top-bar />
-        <main class="flex-1 bg-gray-900 p-4 overflow-y-auto">
-            <router-outlet />
-        </main>
-    </div>
-</div> 
+<div class="h-screen grid grid-cols-[auto_auto_1fr] bg-gray-900">
+  <!-- Menú de iconos -->
+  <app-menu-left-icons></app-menu-left-icons>
+  <!-- Menú lateral -->
+  <app-submenu-left class="h-full"></app-submenu-left>
+  <!-- Área principal: top-bar + contenido -->
+  <div class="flex flex-col h-full">
+    <app-top-bar></app-top-bar>
+    <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900 p-6">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

@@ -27,7 +27,7 @@ export class LoginComponent {
     if(this.loginForm.valid){
       this.loginvm.loginDto = this.loginForm.value
       this.loginvm.login(() => {
-        this.router.navigate(['/home'])
+        this.router.navigate(['/dashboard/home'])
       })
     }
   }
