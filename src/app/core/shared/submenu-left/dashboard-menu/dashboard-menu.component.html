@@ -1,1 +1,50 @@
-<p>dashboard-menu works!</p>
+<nav class="flex-1 px-2 py-4 space-y-2">
+  <a href="#" class="block px-4 py-2 rounded cursor-pointer dark:hover:text-white text-gray-700 dark:text-gray-400 text-xs font-bold">Ventas</a>
+  <a href="#" class="block px-4 py-2 rounded cursor-pointer dark:hover:text-white text-gray-700 dark:text-gray-400 text-xs font-bold">Análisis CRM</a>
+  <a href="#" class="block px-4 py-2 rounded cursor-pointer dark:hover:text-white text-gray-700 dark:text-gray-400 text-xs font-bold">Pedidos</a>
+  <hr/>
+  <div>
+    <div
+      class="px-4 py-2 rounded text-gray-700 dark:text-gray-200 cursor-pointer dark:hover:text-white flex items-center justify-between text-xs font-bold"
+      (click)="toggleCrypto()"
+    >
+      Criptomoneda
+      <span class="ml-2 transition-transform" [ngClass]="{'rotate-90': cryptoOpen}">
+        <!-- Flecha derecha SVG -->
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </div>
+    <div
+      class="ml-4 mt-1 space-y-1 transition-all duration-200 overflow-hidden"
+      [style.maxHeight]="cryptoOpen ? '100px' : '0px'"
+      [style.opacity]="cryptoOpen ? '1' : '0'"
+    >
+      <a href="#" class="block px-4 py-1 rounded hover:bg-gray-100 dark:hover:text-white text-gray-600 dark:text-gray-300 text-xs font-bold">Criptomoneda v1</a>
+      <a href="#" class="block px-4 py-1 rounded hover:bg-gray-100 dark:hover:text-white text-gray-600 dark:text-gray-300 text-xs font-bold">Criptomoneda v2</a>
+    </div>
+  </div>
+  <div>
+    <div
+      class="px-4 py-2 rounded text-gray-600 dark:text-gray-300 text-xs font-bold cursor-pointer hover:bg-gray-100 dark:hover:text-white flex items-center justify-between"
+      (click)="toggleBanka()"
+    >
+      Banca
+      <span class="ml-2 transition-transform" [ngClass]="{'rotate-90': bankaOpen}">
+        <!-- Flecha derecha SVG -->
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </div>
+    <div
+      class="ml-4 mt-1 space-y-1 transition-all duration-200 overflow-hidden"
+      [style.maxHeight]="bankaOpen ? '100px' : '0px'"
+      [style.opacity]="bankaOpen ? '1' : '0'"
+    >
+      <a href="#" class="block px-4 py-1 rounded hover:bg-gray-100 dark:hover:text-white text-gray-600 dark:text-gray-300 text-xs font-bold">Banca v1</a>
+      <a href="#" class="block px-4 py-1 rounded hover:bg-gray-100 dark:hover:text-white text-gray-600 dark:text-gray-300 text-xs font-bold">Banca v2</a>
+    </div>
+  </div>
+</nav>

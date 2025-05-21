@@ -1,8 +1,8 @@
 <div class="h-screen grid grid-cols-[auto_auto_1fr] bg-gray-900">
   <!-- Menú de iconos -->
-  <app-menu-left-icons></app-menu-left-icons>
+  <app-menu-left-icons (menuChange)="handleMenuChange($event)"></app-menu-left-icons>
   <!-- Menú lateral -->
-  <app-submenu-left class="h-full"></app-submenu-left>
+  <app-submenu-left [title]="title" [tipeMenu]="activeMenu" class="h-full"></app-submenu-left>
   <!-- Área principal: top-bar + contenido -->
   <div class="flex flex-col h-full">
     <app-top-bar></app-top-bar>

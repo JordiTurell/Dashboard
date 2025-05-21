@@ -2,6 +2,7 @@
 <div class="w-full relative flex items-center justify-center group rounded-xl hover:bg-gray-800">
   <button
     type="button"
+    (click)="handleClick()"
     class="relative flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-lg outline-none transition-colors duration-200 hover:bg-primary-600/20 focus:bg-primary-600/20 active:bg-primary-600/25 dark:text-dark-200 dark:hover:bg-dark-300/20 dark:focus:bg-dark-300/20 dark:active:bg-dark-300/25 text-gray-500"
   >
     <!-- Tu SVG aquí -->
@@ -10,7 +11,7 @@
   </button>
   <!-- Tooltip -->
   <span
-    class="absolute left-full top-1/2 -translate-y-1/2 ml-3 whitespace-nowrap rounded-xl bg-gray-800 px-3 py-1 text-xs text-white opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none transition-opacity z-50 shadow-lg"
+    class="absolute left-full top-1/2 -translate-y-1/2 ml-3 whitespace-nowrap rounded-xl bg-gray-800 px-3 py-1 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity z-50 shadow-lg"
 >
     {{ tooltip }}
   </span>

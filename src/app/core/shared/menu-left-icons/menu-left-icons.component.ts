@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { IconsComponent } from "@core/shared/menu-left-icons/icons/icons.component";
 
 @Component({
@@ -8,5 +8,9 @@ import { IconsComponent } from "@core/shared/menu-left-icons/icons/icons.compone
   styleUrl: './menu-left-icons.component.scss'
 })
 export class MenuLeftIconsComponent {
+  @Output() menuChange: EventEmitter<string> = new EventEmitter<string>();
 
+  onIconClick(tipoicon: string) {
+    this.menuChange.emit(tipoicon);
+  }
 }

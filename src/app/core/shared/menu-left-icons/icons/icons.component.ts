@@ -1,4 +1,4 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ICONS } from '@core/shared/utils/icons';
 
@@ -15,9 +15,17 @@ export class IconsComponent implements OnInit {
   @Input() icon!: SafeHtml;
   sanitized: DomSanitizer = inject(DomSanitizer);
 
+  @Output() iconClick: EventEmitter<string> = new EventEmitter<string>();
+
+  constructor() {
+    
+  }
+
   ngOnInit() {
-    console.log('icon input:', this.icon);
-    console.log('SVG:', this.icons[this.tipoicon]);
     this.icon = this.sanitized.bypassSecurityTrustHtml(this.icons[this.tipoicon])
+  }
+
+  handleClick() {
+    this.iconClick.emit(this.tipoicon);
   }
 }
