@@ -1,25 +1,31 @@
-<div class="flex flex-col h-full border border-gray-200 dark:border-gray-700 border-t-0 border-b-0 bg-black dark:bg-dark-900 w-56">
-  <!-- Puedes ajustar w-56 según el ancho deseado -->
-  <div class="flex items-center h-16 px-4 border-b border-gray-100 dark:border-gray-800">
-    <span class="text-lg font-semibold text-gray-800 dark:text-gray-100">{{ title }}</span>
-  </div>
+@if(tipeMenu != ''){
+  <div class="flex flex-col h-full border border-gray-200 dark:border-gray-700 border-t-0 border-b-0 bg-black dark:bg-dark-900 w-56">
+    <!-- Puedes ajustar w-56 según el ancho deseado -->
+    <div class="flex items-center h-16 px-4 border-b border-gray-100 dark:border-gray-800">
+      <span class="text-sm font-semibold text-gray-800 dark:text-gray-500">{{ title }}</span>
+    </div>
 
-  @if(tipeMenu == 'dashboard'){
-    <app-dashboard-menu></app-dashboard-menu>
-  }
-  @if(tipeMenu == 'apps'){
-    <app-apps-menu></app-apps-menu>
-  }
-  @if(tipeMenu == 'components'){
-    <app-components-menu></app-components-menu>
-  }
-  @if(tipeMenu == 'forms'){
-    <app-forms-menu></app-forms-menu>
-  }
-  @if(tipeMenu == 'tables'){
-    <app-tables-menu></app-tables-menu>
-  }
-  @if(tipeMenu == 'prototypes'){
-    <app-prototypes-menu></app-prototypes-menu>
-  }
-</div>
+    @if(tipeMenu == 'dashboard'){
+      <app-dashboard-menu></app-dashboard-menu>
+    }
+    @if(tipeMenu == 'apps'){
+      <app-apps-menu (openApps)="openApps($event)"></app-apps-menu>
+    }
+    @if(tipeMenu == 'components'){
+      <app-components-menu></app-components-menu>
+    }
+    @if(tipeMenu == 'forms'){
+      <app-forms-menu></app-forms-menu>
+    }
+    @if(tipeMenu == 'tables'){
+      <app-tables-menu></app-tables-menu>
+    }
+    @if(tipeMenu == 'prototypes'){
+      <app-prototypes-menu></app-prototypes-menu>
+    }
+  </div>
+}
+
+@if(submenu == 'chat'){
+  <app-chat></app-chat>
+}

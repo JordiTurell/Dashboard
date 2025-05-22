@@ -1,12 +1,20 @@
-<div class="h-screen grid grid-cols-[auto_auto_1fr] bg-gray-900">
+<div class="h-screen bg-gray-900 transition-all duration-300" [ngClass]="showSubmenu ? 'grid grid-cols-[auto_auto_1fr]' : 'grid grid-cols-[auto_0_1fr]'">
   <!-- Menú de iconos -->
   <app-menu-left-icons (menuChange)="handleMenuChange($event)"></app-menu-left-icons>
   <!-- Menú lateral -->
-  <app-submenu-left [title]="title" [tipeMenu]="activeMenu" class="h-full"></app-submenu-left>
+   <div
+    class="h-full transition-all duration-300 overflow-hidden"
+    [ngClass]="showSubmenu ? 'w-56 opacity-100' : 'w-0 opacity-0'"
+  >
+    @if(showSubmenu) {
+      <app-submenu-left [title]="title" [tipeMenu]="activeMenu" class="h-full"></app-submenu-left>
+    }
+    
+  </div>
   <!-- Área principal: top-bar + contenido -->
   <div class="flex flex-col h-full">
-    <app-top-bar></app-top-bar>
-    <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900 p-6">
+    <app-top-bar [submenuOpen]="showSubmenu" (toggleMenu)="toggleSubmenu()"></app-top-bar>
+    <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900 p-6 transition-all duration-300">
       <router-outlet></router-outlet>
     </main>
   </div>

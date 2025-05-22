@@ -1,11 +1,13 @@
-<nav class="flex-1 px-2 py-4 space-y-2">
-  <a href="#" class="block px-4 py-2 rounded cursor-pointer dark:hover:text-white text-gray-700 dark:text-gray-400 text-xs font-bold">Ventas</a>
-  <a href="#" class="block px-4 py-2 rounded cursor-pointer dark:hover:text-white text-gray-700 dark:text-gray-400 text-xs font-bold">Análisis CRM</a>
-  <a href="#" class="block px-4 py-2 rounded cursor-pointer dark:hover:text-white text-gray-700 dark:text-gray-400 text-xs font-bold">Pedidos</a>
-  <hr/>
+<nav class="flex-1 px-0 py-4 space-y-2">
+  <div class="w-full border border-gray-200 dark:border-gray-700 border-t-0 border-l-0 border-r-0 px-0">
+    <a href="#" class="block px-4 py-2 rounded cursor-pointer dark:hover:text-white text-gray-700 dark:text-gray-400 text-xs font-bold">Dashboard</a>
+    <a href="#" class="block px-4 py-2 rounded cursor-pointer dark:hover:text-white text-gray-700 dark:text-gray-400 text-xs font-bold">Ventas</a>
+    <a href="#" class="block px-4 py-2 rounded cursor-pointer dark:hover:text-white text-gray-700 dark:text-gray-400 text-xs font-bold">Análisis CRM</a>
+    <a href="#" class="block px-4 py-2 rounded cursor-pointer dark:hover:text-white text-gray-700 dark:text-gray-400 text-xs font-bold">Pedidos</a>
+  </div>
   <div>
     <div
-      class="px-4 py-2 rounded text-gray-700 dark:text-gray-200 cursor-pointer dark:hover:text-white flex items-center justify-between text-xs font-bold"
+      class="px-4 py-2 rounded text-gray-700 dark:text-gray-400 cursor-pointer dark:hover:text-white flex items-center justify-between text-xs font-bold"
       (click)="toggleCrypto()"
     >
       Criptomoneda
@@ -21,13 +23,13 @@
       [style.maxHeight]="cryptoOpen ? '100px' : '0px'"
       [style.opacity]="cryptoOpen ? '1' : '0'"
     >
-      <a href="#" class="block px-4 py-1 rounded hover:bg-gray-100 dark:hover:text-white text-gray-600 dark:text-gray-300 text-xs font-bold">Criptomoneda v1</a>
-      <a href="#" class="block px-4 py-1 rounded hover:bg-gray-100 dark:hover:text-white text-gray-600 dark:text-gray-300 text-xs font-bold">Criptomoneda v2</a>
+      <a href="#" class="block px-4 py-1 rounded dark:hover:text-white text-gray-700 dark:text-gray-300 text-xs font-bold">Criptomoneda v1</a>
+      <a href="#" class="block px-4 py-1 rounded dark:hover:text-white text-gray-700 dark:text-gray-300 text-xs font-bold">Criptomoneda v2</a>
     </div>
   </div>
   <div>
     <div
-      class="px-4 py-2 rounded text-gray-600 dark:text-gray-300 text-xs font-bold cursor-pointer hover:bg-gray-100 dark:hover:text-white flex items-center justify-between"
+      class="px-4 py-2 rounded text-gray-700 dark:text-gray-400 text-xs font-bold cursor-pointer dark:hover:text-white flex items-center justify-between"
       (click)="toggleBanka()"
     >
       Banca
@@ -43,8 +45,8 @@
       [style.maxHeight]="bankaOpen ? '100px' : '0px'"
       [style.opacity]="bankaOpen ? '1' : '0'"
     >
-      <a href="#" class="block px-4 py-1 rounded hover:bg-gray-100 dark:hover:text-white text-gray-600 dark:text-gray-300 text-xs font-bold">Banca v1</a>
-      <a href="#" class="block px-4 py-1 rounded hover:bg-gray-100 dark:hover:text-white text-gray-600 dark:text-gray-300 text-xs font-bold">Banca v2</a>
+      <a href="#" class="block px-4 py-1 rounded dark:hover:text-white text-gray-700 dark:text-gray-300 text-xs font-bold">Banca v1</a>
+      <a href="#" class="block px-4 py-1 rounded dark:hover:text-white text-gray-700 dark:text-gray-300 text-xs font-bold">Banca v2</a>
     </div>
   </div>
 </nav>

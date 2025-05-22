@@ -1,6 +1,6 @@
 export const optionsMenuTitle: Record<string, string> = {
   dashboard: 'Dashboard',
-  apps: 'Apps',
+  apps: 'Chat',
   prototypes: 'Prototypes',
   tables: 'Tables',
   forms: 'Forms',
