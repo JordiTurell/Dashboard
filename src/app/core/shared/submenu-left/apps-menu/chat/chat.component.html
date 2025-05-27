@@ -1,1 +1,23 @@
-
+ <div class="flex flex-col h-full border border-gray-200 dark:border-gray-700 border-t-0 border-b-0 bg-black dark:bg-dark-900 w-56">
+    <!-- Puedes ajustar w-56 según el ancho deseado -->
+    <div class="flex items-center gap-3">
+      <div class="avatar relative inline-flex shrink-0">
+        <div class="avatar-initial avatar-display flex h-full w-full select-none items-center justify-center font-medium uppercase this:primary text-this-darker bg-this-darker/10 dark:text-this-lighter dark:bg-this-lighter/10">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-[55px] text-red-500 m-[15px] bg-blue-500 rounded-[29%] p-2" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4.5 stroke-2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"></path></svg>
+        </div>
+      </div>
+      <p class="truncate text-sm tracking-wider font-bold text-gray-800 dark:text-gray-500 mt-5">Chat</p>
+    </div>  
+    <div class="flex items-center gap-3">
+      <!-- Carrusel de imágenes redondas -->
+      <div class="mt-4 overflow-x-auto hide-scrollbar select-none" #carousel>
+        <div class="flex gap-4 w-max px-2">
+          <img src="/image/profile1.png" alt="img1" class="h-14 w-14 rounded-full border-2 border-blue-400 object-cover cursor-pointer hover:scale-105 transition-transform duration-200" />
+          <img src="/image/profile2.png" alt="img2" class="h-14 w-14 rounded-full border-2 border-blue-400 object-cover cursor-pointer hover:scale-105 transition-transform duration-200" />
+          <img src="/image/profile3.png" alt="img3" class="h-14 w-14 rounded-full border-2 border-blue-400 object-cover cursor-pointer hover:scale-105 transition-transform duration-200" />
+          <img src="/image/profile4.png" alt="img4" class="h-14 w-14 rounded-full border-2 border-blue-400 object-cover cursor-pointer hover:scale-105 transition-transform duration-200" />
+          <!-- Añade más imágenes si quieres -->
+        </div>
+      </div>
+    </div>  
+</div>

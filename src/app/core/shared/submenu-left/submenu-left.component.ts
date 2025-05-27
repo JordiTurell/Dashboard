@@ -23,7 +23,6 @@ export class SubmenuLeftComponent implements OnChanges {
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
-    const tipos = optionsMenuTitle;
     this.tipeMenu = this.getTipoByTitle(this.title) || '';
   }
 
@@ -32,6 +31,7 @@ export class SubmenuLeftComponent implements OnChanges {
       this.submenu = this.getTipoSubMenu(tipe) || '';
       if(this.submenu != '') {
         this.tipeMenu = '';
+        console.log(this.submenu);
       }
     }
   }
